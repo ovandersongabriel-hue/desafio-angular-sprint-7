@@ -1,0 +1,20 @@
+<section class="login-wrapper">
+  
+    <div class="image-side">
+      <img src="img/ranger.png" alt="Ford Ranger">
+    </div>
+  
+    <div class="login-container">
+      <img src="img/ford.png" alt="Logo Ford" width="100">
+      <h2>Boas-vindas</h2>
+      
+      <label for="user">Usuário</label>
+      <input type="text" [(ngModel)]="usuario" id="user" placeholder="Insira seu e-mail">
+      
+      <label for="pass">Senha</label>
+      <input type="password" [(ngModel)]="senha" id="pass" placeholder="Insira sua senha">
+      
+      <button (click)="entrar()">Entrar</button>
+    </div>
+  
+  </section>
