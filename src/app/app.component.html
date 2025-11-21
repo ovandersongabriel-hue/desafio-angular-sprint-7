@@ -1,22 +1,3 @@
-<nav class="sidebar-menu" *ngIf="showLayout">
-    <a [routerLink]="['/dashboard']" class="menu-item">
-        <span class="material-icons">dashboard</span>
-        Dashboard
-    </a>
-    <a [routerLink]="['/home']" class="menu-item">
-        <span class="material-icons">home</span>
-        Home
-    </a>
-    <a [routerLink]="['/produtos']" class="menu-item">
-        <span class="material-icons">inventory_2</span>
-        Produtos
-    </a>
-    <a (click)="sair()" class="menu-item menu-item-sair">
-        <span class="material-icons">logout</span>
-        Sair
-    </a>
-</nav>
-
 <div class="content-wrapper">
     <router-outlet></router-outlet> 
 </div>
