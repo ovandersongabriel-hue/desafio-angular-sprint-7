@@ -1,13 +1,37 @@
-<div class="card-principal">
-    
-  <h2>Bem-vindo à Home!</h2>
-  <p>Você efetuou o login com sucesso.</p>
+<button class="hamburger-btn" (click)="alternarMenu()">
+    <span class="material-icons">menu</span>
+</button>
 
-  <div class="botoes-container"> 
-      <button class="btn-dashboard" [routerLink]="['/dashboard']"> 
-          <span class="material-icons">menu</span> Dashboard
-      </button>
-      
-      <button class="btn-sair">Sair</button>
-  </div>
+<div class="overlay" *ngIf="menuAberto" (click)="alternarMenu()"></div>
+
+<nav class="sidebar-menu" [class.ativo]="menuAberto">
+    
+    <button class="close-btn" (click)="alternarMenu()">
+        <span class="material-icons">close</span>
+    </button>
+
+    <a href='/dashboard' class="menu-item" (click)="alternarMenu()">
+        <span class="material-icons">dashboard</span>
+        
+    </a>
+    <a href='/home' class="menu-item" (click)="alternarMenu()">
+        <span class="material-icons">home</span>
+        
+    </a>
+    <a class="menu-item menu-item-sair" (click)="alternarMenu()">
+        <span class="material-icons">logout</span>
+        Sair
+    </a>
+</nav>
+
+<div class="card-principal">
+    <h2>Bem-vindo à Home!</h2>
+    <p>Você efetuou o login com sucesso.</p>
+
+    <div class="botoes-container">
+        <button class="btn-dashboard" [routerLink]="['/dashboard']">
+            <span class="material-icons">menu</span> Dashboard
+        </button>
+        <button class="btn-sair">Sair</button>
+    </div>
 </div>

@@ -1,23 +1,87 @@
-<div class="dashboard-principal">
-    <h2>Visão Geral do Sistema</h2>
-    
-    <div class="metricas-container">
-        <div class="card-metrica">
-            <h3>Clientes Ativos</h3>
-            <p class="valor">1.250</p>
-        </div>
-        <div class="card-metrica">
-            <h3>Vendas Mensais</h3>
-            <p class="valor">R$ 45.890</p>
-        </div>
-        <div class="card-metrica">
-            <h3>Tickets Abertos</h3>
-            <p class="valor">12</p>
-        </div>
-    </div>
+<nav class="sidebar-menu" *ngIf="showLayout">
+    <a href='/dashboard' class="menu-item">
+        <span class="material-icons">dashboard</span> Dashboard
+    </a>
+    <a href='/home' class="menu-item">
+        <span class="material-icons">home</span> Home
+    </a>
+    <a class="menu-item menu-item-sair">
+        <span class="material-icons">logout</span> Sair
+    </a>
+</nav>
 
-    <div class="tabela-container">
-        <h3>Últimas Atividades</h3>
-        <p>Tabela de dados e lista de tarefas pendentes.</p>
-    </div>
+<div class="dashboard-principal">
+
+    <h1 class="main-title">Dashboard FORD</h1>
+
+    <section class="top-cards-section">
+        
+        <div class="card dropdown-card">
+            <div class="card-header">Veículo</div>
+            <div class="card-body">
+                <select id="veiculos-select">
+                    <option value="mustang" selected>Mustang</option>
+                    <option value="ranger">Ranger</option>
+                    <option value="territory">Territory</option>
+                    <option value="bronco">Bronco Sport</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card info-card">
+            <div class="card-header">Total de Vendas</div>
+            <div class="card-body">
+                <span class="big-number">1500</span>
+                <span class="unit-label">Unid.</span>
+            </div>
+        </div>
+
+        <div class="card info-card">
+            <div class="card-header">Conectados</div>
+            <div class="card-body">
+                <span class="big-number">500</span>
+                <span class="unit-label">Unid.</span>
+            </div>
+        </div>
+
+        <div class="card info-card">
+            <div class="card-header">Update Software</div>
+            <div class="card-body">
+                <span class="big-number">750</span>
+                <span class="unit-label">Unid.</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-section">
+        <img src="img/mustang.png" alt="Ford Mustang Preto" class="car-image">
+    </section>
+
+    <section class="bottom-table-section">
+        <table class="data-table">
+            <thead>
+                <tr class="th-tabela">
+                    <th>Código - Vin</th>
+                    <th>Odômetro</th>
+                    <th>Nível de Combustível</th>
+                    <th>Status</th>
+                    <th>Lat.</th>
+                    <th>Long.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="vin-cell">
+                        <input type="text" class="vin-input">
+                    </td>
+                    <td>50000 Km</td>
+                    <td>90 %</td>
+                    <td>on</td>
+                    <td>-12,2322</td>
+                    <td>-35,2314</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
 </div>
