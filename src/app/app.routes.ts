@@ -9,4 +9,8 @@ export const routes: Routes = [
  { path: 'home', component: HomeComponent },
  { path: 'dashboard', component: DashboardComponent },
  { path: '', redirectTo: 'login', pathMatch: 'full' },
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> 2f6422cc61d3a9e7f7a2f7bc167438bb39003461
