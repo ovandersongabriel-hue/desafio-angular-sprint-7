@@ -6,27 +6,16 @@ import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, CommonModule], 
+  imports: [RouterOutlet, CommonModule], 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css' 
 })
-export class AppComponent implements OnInit { 
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  } 
 
-  showLayout = false;
+  title = 'Sprint7OG';
 
-  constructor(private router: Router) {} 
-
-  ngOnInit() {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe((event: NavigationEnd) => {
-      
-      this.showLayout = event.url !== '/login';
-    });
-  }
-
-  sair() {
-    console.log("Usuário deslogado. Redirecionando para login.");
-    this.router.navigate(['/login']); 
-  }
+ 
 }

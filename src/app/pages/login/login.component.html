@@ -1,0 +1,11 @@
+<form (ngSubmit)="login()">
+
+    <label for="nome">Usuario</label>
+    <input type="text" name="nome" id="nome" [(ngModel)]="usuario.nome">
+    <br>
+    <label for="senha">Senha</label>
+    <input type="text" name="senha" id="senha" [(ngModel)]="usuario.senha">
+    <br>
+    <button type="submit">ENVIAR</button>
+
+</form>
